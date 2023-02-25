@@ -14,7 +14,7 @@ class CustomBottomNavbar extends StatelessWidget {
         Container(
           height: 50,
           width: double.infinity,
-          color: mainColor,
+          color: Colors.transparent,
           child: Row(children: [
             const Spacer(),
             IconButton(
@@ -24,10 +24,11 @@ class CustomBottomNavbar extends StatelessWidget {
                 }
               },
               icon: const Icon(
-                Icons.widgets,
-                size: 25,
+                Icons.home_outlined,
+                size: 27,
               ),
-              color: Colors.white,
+              tooltip: 'Home',
+              color: mainColor,
             ),
             const Spacer(),
             IconButton(
@@ -37,10 +38,10 @@ class CustomBottomNavbar extends StatelessWidget {
                 }
               },
               icon: const Icon(
-                Icons.sell,
+                Icons.history,
                 size: 25,
               ),
-              color: Colors.white,
+              color: mainColor,
             ),
             const Spacer(),
             IconButton(
@@ -50,10 +51,10 @@ class CustomBottomNavbar extends StatelessWidget {
                 }
               },
               icon: const Icon(
-                Icons.bookmark_sharp,
+                Icons.search,
                 size: 25,
               ),
-              color: Colors.white,
+              color: mainColor,
             ),
             const Spacer(),
             IconButton(
@@ -63,10 +64,23 @@ class CustomBottomNavbar extends StatelessWidget {
                 }
               },
               icon: const Icon(
-                Icons.person,
+                Icons.shopping_cart_outlined,
                 size: 25,
               ),
-              color: Colors.white,
+              color: mainColor,
+            ),
+            const Spacer(),
+            IconButton(
+              onPressed: () {
+                if (onTap != null) {
+                  onTap(3);
+                }
+              },
+              icon: const Icon(
+                Icons.person_outline,
+                size: 25,
+              ),
+              color: mainColor,
             ),
             const Spacer(),
           ]),

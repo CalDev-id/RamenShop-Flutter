@@ -9,6 +9,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int selectedIndex = 0;
+  int selectedIndexNavbar = 0;
   List<String> menus = [
     'All',
     'Ramen',
@@ -22,6 +23,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      bottomNavigationBar: CustomBottomNavbar(
+        selectedIndex: 0,
+        onTap: (index) {
+          setState(() {
+            selectedIndexNavbar = index;
+          });
+        },
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
