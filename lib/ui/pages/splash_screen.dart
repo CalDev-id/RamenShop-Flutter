@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
       children: [
         SafeArea(
             child: Container(
-          height: size.height * .63,
+          height: size.height * .70,
           width: double.infinity,
           decoration: const BoxDecoration(
               image: DecorationImage(
@@ -21,7 +21,7 @@ class SplashScreen extends StatelessWidget {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            height: size.height * .40,
+            height: size.height * .33,
             padding: const EdgeInsets.only(top: 0, left: 24, right: 24),
             decoration: const BoxDecoration(
                 color: Colors.white,
@@ -55,7 +55,9 @@ class SplashScreen extends StatelessWidget {
                   width: double.infinity,
                   height: 45,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const HomePage());
+                    },
                     style: ElevatedButton.styleFrom(
                         primary: mainColor,
                         shape: RoundedRectangleBorder(
