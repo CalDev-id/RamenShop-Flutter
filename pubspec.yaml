@@ -38,6 +38,7 @@ dependencies:
   google_fonts: ^2.1.0
   supercharged: ^2.1.1
   get: ^4.6.5
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
